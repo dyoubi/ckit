@@ -1,0 +1,10 @@
+{
+	"$schema": "http://json.schemastore.org/tsconfig",
+	"extends": "./tsconfig.template.json",
+	"compilerOptions": {
+	  "outDir": "dist/__tests__",
+	  "rootDir": "src"
+	},
+	"include": ["src", "__tests__"]
+  }
+  

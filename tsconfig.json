@@ -1,0 +1,14 @@
+{
+	"$schema": "http://json.schemastore.org/tsconfig",
+	"extends": "../../tsconfig.common.json",
+	"compilerOptions": {
+		"outDir": "dist",
+		"rootDir": "src",
+		"emitDecoratorMetadata": true,
+		"useUnknownInCatchVariables": false
+
+	},
+	"include": [
+		"src"
+	],
+}

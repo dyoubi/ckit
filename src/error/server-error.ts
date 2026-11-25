@@ -1,0 +1,43 @@
+import { ErrorProtocolType, ServerException } from "./exception";
+
+export type ServerExceptionConstructor = new (msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) => ServerException;
+
+export class BadRequestException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'BadRequest', 400, details, original); } }
+export class UnauthorizedException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'Unauthorized', 401, details, original); } }
+export class PaymentRequiredException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'PaymentRequired', 402, details, original); } }
+export class ForbiddenException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'Forbidden', 403, details, original); } }
+export class NotFoundException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'NotFound', 404, details, original); } }
+export class MethodNotAllowedException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'MethodNotAllowed', 405, details, original); } }
+export class NotAcceptableException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'NotAcceptable', 406, details, original); } }
+export class ProxyAuthenticationRequiredException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'ProxyAuthenticationRequired', 407, details, original); } }
+export class RequestTimeoutException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'RequestTimeout', 408, details, original); } }
+export class ConflictException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'Conflict', 409, details, original); } }
+export class GoneException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'Gone', 410, details, original); } }
+export class LengthRequiredException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'LengthRequired', 411, details, original); } }
+export class PreconditionFailedException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'PreconditionFailed', 412, details, original); } }
+export class PayloadTooLargeException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'PayloadTooLarge', 413, details, original); } }
+export class URITooLongException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'URITooLong', 414, details, original); } }
+export class UnsupportedMediaTypeException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'UnsupportedMediaType', 415, details, original); } }
+export class RangeNotSatisfiableException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'RangeNotSatisfiable', 416, details, original); } }
+export class ExpectationFailedException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'ExpectationFailed', 417, details, original); } }
+export class MisdirectedRequestException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'MisdirectedRequest', 421, details, original); } }
+export class UnprocessableEntityException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'UnprocessableEntity', 422, details, original); } }
+export class LockedException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'Locked', 423, details, original); } }
+export class FailedDependencyException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'FailedDependency', 424, details, original); } }
+export class TooEarlyException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'TooEarly', 425, details, original); } }
+export class UpgradeRequiredException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'UpgradeRequired', 426, details, original); } }
+export class PreconditionRequiredException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'PreconditionRequired', 428, details, original); } }
+export class TooManyRequestsException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'TooManyRequests', 429, details, original); } }
+export class RequestHeaderFieldsTooLargeException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'RequestHeaderFieldsTooLarge', 431, details, original); } }
+export class UnavailableForLegalReasonsException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'UnavailableForLegalReasons', 451, details, original); } }
+export class InternalServerErrorException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'InternalServerError', 500, details, original); } }
+export class NotImplementedException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'NotImplemented', 501, details, original); } }
+export class BadGatewayException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'BadGateway', 502, details, original); } }
+export class ServiceUnavailableException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'ServiceUnavailable', 503, details, original); } }
+export class GatewayTimeoutException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'GatewayTimeout', 504, details, original); } }
+export class HTTPVersionNotSupportedException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'HTTPVersionNotSupported', 505, details, original); } }
+export class VariantAlsoNegotiatesException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'VariantAlsoNegotiates', 506, details, original); } }
+export class InsufficientStorageException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'InsufficientStorage', 507, details, original); } }
+export class LoopDetectedException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'LoopDetected', 508, details, original); } }
+export class NotExtendedException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'NotExtended', 510, details, original); } }
+export class NetworkAuthenticationRequiredException extends ServerException { constructor(msg?: string, type?: ErrorProtocolType, details?: any, original?: Error) { super(msg, type, 'NetworkAuthenticationRequired', 511, details, original); } }

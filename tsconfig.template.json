@@ -1,0 +1,24 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+	  "emitDecoratorMetadata": true,
+	  "experimentalDecorators": true,
+	  "resolveJsonModule": true,
+	  "skipLibCheck": true,
+	  "strict": true,
+	  "strictPropertyInitialization": false,
+	  // https://devblogs.microsoft.com/typescript/announcing-typescript-4-4/#use-unknown-catch-variables
+	  "useUnknownInCatchVariables": false,
+	  "incremental": true,
+	  "lib": [
+		"ES7"
+	  ],
+	  "module": "commonjs",
+	  "esModuleInterop": true,
+	  "moduleResolution": "node",
+	  "target": "ES6",
+	  "sourceMap": true,
+	  "declaration": true,
+	  "importHelpers": true
+	}
+  }
